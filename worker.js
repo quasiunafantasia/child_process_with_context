@@ -7,6 +7,11 @@ var context = new vm.createContext(Object.assign(global, ctx));
 script.runInContext(context);
 
 function zarabotaiPls() {
+
+    setInterval(function () {
+        console.log('ne umirayu!');
+    }, 0);
+
     process.on('message', function(m){
         if(m == exit) {
             console.log('umer');
